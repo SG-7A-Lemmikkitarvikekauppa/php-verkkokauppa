@@ -11,8 +11,6 @@ import Products from './pages/Products';
 const URL = 'http://localhost/react-kauppa/';
 
 
-
-
 function App() {
   return (
     <>
