@@ -8,9 +8,12 @@ import Kampanjat from './Kampanjat';
 import Yhteystiedot from './Yhteystiedot';
 import Kissat from './kissat';
 import Koirat from './koirat';
+import Kissanlelut from './KissatRuoka';
+import { Dropdown } from 'react-bootstrap';
+
 
 function NavigationBar() {
-  const [tuoteryhma, setTuoteryhma] = useState("");
+  
   return (
     <Router>
       <div id="etusivu">
@@ -25,37 +28,39 @@ function NavigationBar() {
                 <li className="nav-item">
                   <Link to="/etusivu" className="nav-link">Etusivu</Link>
                 </li>
-                <li className="nav-item dropdown">
-                <a
-                 className="nav-link dropdown-toggle"
-                     href="#"
-                     id="tuoteryhmatDropdown"
-                     role="button"
-                     data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                     onClick={(e) => {
-                     e.preventDefault();
-                     setTuoteryhma("selected");
-                      }}
-                      >
-                          Tuoteryhmät
-                                  </a>
-<li className="nav-item dropdown">
-  <div
-    className={`dropdown-menu${tuoteryhma}`}
-    aria-labelledby="tuoteryhmatDropdown"
-  >
-    <Link to="/kissat" className="dropdown-item">
-      Kissat
-    </Link>
-    <Link to="/koirat" className="dropdown-item">
-      Koirat
-    </Link>
-  </div>
-</li>
+                
+                <li className="nav-item">
+                  <Dropdown>
+                    <Dropdown.Toggle variant="light" id="dropdown-basic">
+                      Kissat
+                    </Dropdown.Toggle>
 
-                    </li>
+                    <Dropdown.Menu>
+                      <Dropdown.Item as={Link} to="/KissatLelut">Lelut</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koirat">Ruoka</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koirat">Hoito ja huolenpito</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koirat">Muut</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </li>
 
+                <li className="nav-item">
+                  <Dropdown>
+                    <Dropdown.Toggle variant="light" id="dropdown-basic">
+                      Koirat
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item as={Link} to="/KissatLelut">Lelut</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koirat">Ruoka</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koirat">Hoito ja huolenpito</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koirat">Ulkoilu</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koirat">Muut</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+
+
+                </li>
                 <li className="nav-item">
                   <Link to="/kampanjat" className="nav-link">Kampanjat</Link>
                 </li>
@@ -70,18 +75,15 @@ function NavigationBar() {
           </div>
         </nav>
         <div>
-       
-      <Routes>
-        <Route exact path="/" component={Etusivu} />
-        <Route path="/tuoteryhmat" component={Tuoteryhmat} />
-        <Route path="/kampanjat" component={Kampanjat} />
-        <Route path="/yhteystiedot" component={Yhteystiedot} />
-        <Route path="/kissat" component={Kissat} />
-        <Route path="/koirat" component={Koirat} />
-     </Routes>
-        
-      
-    
+          <Routes>
+            <Route exact path="/" component={Etusivu} />
+            <Route path="/tuoteryhmat" component={Tuoteryhmat} />
+            <Route path="/kampanjat" component={Kampanjat} />
+            <Route path="/yhteystiedot" component={Yhteystiedot} />
+            <Route path="/kissat" component={Kissat} />
+            <Route path="/koirat" component={Koirat} />
+            <Route path="/KissatLelut" component={Kissanlelut} />
+          </Routes>
         </div>
       </div>
     </Router>

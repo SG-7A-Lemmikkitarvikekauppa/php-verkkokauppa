@@ -1,13 +1,34 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { Dropdown } from 'react-bootstrap';
+import KissatRuoka from './KissatRuoka';
+import KissatLelut from './KissatLelut';
 
 function Kissat() {
   return (
-    <div>
-      <h2>Kissat</h2>
-      <p>Täältä löydät kaikki kissatuotteemme</p>
-    </div>
+    <Dropdown>
+      <Dropdown.Toggle variant="light" id="dropdown-basic">
+        Kissat
+      </Dropdown.Toggle>
+      <Dropdown.Menu>
+        <Dropdown.Item as={Link} to="/KissatRuoka">Ruoka</Dropdown.Item>
+        <Dropdown.Item as={Link} to="/Kissatlelut">Lelut</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
   );
 }
 
-export default Kissat;
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Kissat />} />
+        <Route path="/KissatRuoka" element={<KissatRuoka />} />
+        <Route path="/Kissatlelut" element={<KissatLelut />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
