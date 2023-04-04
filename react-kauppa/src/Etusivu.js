@@ -2,7 +2,6 @@ import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import '../src/images';
 function Etusivu() {
     return (
       <div>
