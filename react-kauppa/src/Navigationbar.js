@@ -37,7 +37,7 @@ function NavigationBar() {
 
                     <Dropdown.Menu>
                       <Dropdown.Item as={Link} to="/KissatLelut">Lelut</Dropdown.Item>
-                      <Dropdown.Item as={Link} to="/koirat">Ruoka</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/KissatRuoka">Ruoka</Dropdown.Item>
                       <Dropdown.Item as={Link} to="/koirat">Hoito ja huolenpito</Dropdown.Item>
                       <Dropdown.Item as={Link} to="/koirat">Muut</Dropdown.Item>
                     </Dropdown.Menu>
@@ -51,8 +51,8 @@ function NavigationBar() {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                      <Dropdown.Item as={Link} to="/KissatLelut">Lelut</Dropdown.Item>
-                      <Dropdown.Item as={Link} to="/koirat">Ruoka</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koiranlelut">Lelut</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koiranruoka">Ruoka</Dropdown.Item>
                       <Dropdown.Item as={Link} to="/koirat">Hoito ja huolenpito</Dropdown.Item>
                       <Dropdown.Item as={Link} to="/koirat">Ulkoilu</Dropdown.Item>
                       <Dropdown.Item as={Link} to="/koirat">Muut</Dropdown.Item>
