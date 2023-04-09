@@ -10,6 +10,7 @@ import Kissat from './kissat';
 import Koirat from './koirat';
 import Kissanlelut from './KissatRuoka';
 import { Dropdown } from 'react-bootstrap';
+import KissanRuoka from './KissatRuoka';
 
 
 function NavigationBar() {
@@ -37,9 +38,10 @@ function NavigationBar() {
 
                     <Dropdown.Menu>
                       <Dropdown.Item as={Link} to="/KissatLelut">Lelut</Dropdown.Item>
-                      <Dropdown.Item as={Link} to="/KissatRuoka">Ruoka</Dropdown.Item>
-                      <Dropdown.Item as={Link} to="/koirat">Hoito ja huolenpito</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/kissatRuoka">Ruoka</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/kissatHoito">Hoito ja huolenpito</Dropdown.Item>
                       <Dropdown.Item as={Link} to="/koirat">Muut</Dropdown.Item>
+                      
                     </Dropdown.Menu>
                   </Dropdown>
                 </li>
@@ -53,8 +55,8 @@ function NavigationBar() {
                     <Dropdown.Menu>
                       <Dropdown.Item as={Link} to="/koiranlelut">Lelut</Dropdown.Item>
                       <Dropdown.Item as={Link} to="/koiranruoka">Ruoka</Dropdown.Item>
-                      <Dropdown.Item as={Link} to="/koirat">Hoito ja huolenpito</Dropdown.Item>
-                      <Dropdown.Item as={Link} to="/koirat">Ulkoilu</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/koiratHoito">Hoito ja huolenpito</Dropdown.Item>
+                      <Dropdown.Item as={Link} to="/ulkoilu">Ulkoilu</Dropdown.Item>
                       <Dropdown.Item as={Link} to="/koirat">Muut</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
@@ -83,6 +85,8 @@ function NavigationBar() {
             <Route path="/kissat" component={Kissat} />
             <Route path="/koirat" component={Koirat} />
             <Route path="/KissatLelut" component={Kissanlelut} />
+            <Route path="/Kissatruoka" component={KissanRuoka} />
+
           </Routes>
         </div>
       </div>
