@@ -24,7 +24,9 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Kissat />} />
         <Route path="/KissatRuoka" element={<KissatRuoka />} />
-        <Route path="/Kissatlelut" element={<KissatLelut />} />
+        <Route path="/KissatLelut" element={<KissatLelut />} />
+        <Route path="/KissatHoito" element={<kissatHoito />} />
+
       </Routes>
     </Router>
   );

@@ -12,6 +12,9 @@ function Koirat() {
       <Dropdown.Menu>
         <Dropdown.Item as={Link} to="/koiranruoka">Ruoka</Dropdown.Item>
         <Dropdown.Item as={Link} to="/koiranlelut">Lelut</Dropdown.Item>
+        <Dropdown.Item as={Link} to="/koiranhoito">Hoito ja 'huolenpito</Dropdown.Item>
+        <Dropdown.Item as={Link} to="/ulkoilu">Ulkoilu</Dropdown.Item>
+
       </Dropdown.Menu>
     </Dropdown>
   );
@@ -25,6 +28,10 @@ function KoiratLelut() {
   return <h1>Koiranlelut</h1>;
 }
 
+function koiratHoito() {
+  return <h1>Koiranhoito</h1>;
+}
+
 function App() {
   return (
     <Router>
@@ -32,6 +39,8 @@ function App() {
         <Route exact path="/" component={Koirat} />
         <Route path="/koiranruoka" component={KoiratRuoka} />
         <Route path="/koiranlelut" component={KoiratLelut} />
+        <Route path="/koiranhoito" component={koiratHoito} />
+
       </Routes>
     </Router>
   );
