@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import kuva from './koiraruoka.png';
 
 function Etusivu() {
     return (
@@ -14,7 +15,7 @@ function Etusivu() {
           <h2>Suosituimmat tuotteemme</h2>
           <div className="product-grid">
     <div className="product-item">
-      <img src="https://picsum.photos/id/1015/400/300" alt="tuotteen kuva" />
+      <img src= {'koiraruoka.png'} alt="tuotteen kuva" />
       <h3>Tuote 1</h3>
       <p>Kuvaus tuotteesta 1.</p>
       <button>Lisää ostoskoriin</button>
