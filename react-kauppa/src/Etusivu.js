@@ -2,7 +2,14 @@ import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import kuva from './koiraruoka.png';
+import logo from './korianruoka.png';
+import pallo from './pallokoira.jpg';
+import shampoo from './shampoo.png';
+import kissaruoka from './kissaruoka.jpg';
+import kissapuu from './kissapuu.jpg';
+import valjaat from './koiravaljaat.jpg';
+import laser from './kissalaser.jpg';
+import luu from './koiraluu.jpg';
 
 function Etusivu() {
     return (
@@ -15,52 +22,52 @@ function Etusivu() {
           <h2>Suosituimmat tuotteemme</h2>
           <div className="product-grid">
     <div className="product-item">
-      <img src= {'koiraruoka.png'} alt="tuotteen kuva" />
-      <h3>Tuote 1</h3>
-      <p>Kuvaus tuotteesta 1.</p>
+      <img src= {logo} alt="tuotteen kuva" />
+      <h3>Koiran kuivaruoka 5KG</h3>
+      <p>Täysipainoinen, runsaasti kanaa sisältävä täysravinto kookkaaksi kasvaville pennuille. Turvaa tasapainoista kasvua ja sisältää mm. kehityksen kannalta tärkeää omega-3-rasvahappoa.</p>
       <button>Lisää ostoskoriin</button>
     </div>
     <div className="product-item">
-      <img src="https://picsum.photos/id/1016/400/300" alt="tuotteen kuva" />
-      <h3>Tuote 2</h3>
-      <p>Kuvaus tuotteesta 2.</p>
+      <img src= {pallo} alt="tuotteen kuva" />
+      <h3>pallo</h3>
+      <p>Kelluva pallo koiran polskutteluleikkeihin. Pehmeää TPR-kumia.</p>
       <button>Lisää ostoskoriin</button>
     </div>
     <div className="product-item">
-      <img src="https://picsum.photos/id/1015/400/300" alt="tuotteen kuva" />
-      <h3>Tuote 3</h3>
-      <p>Kuvaus tuotteesta 3.</p>
+      <img src={shampoo} alt="tuotteen kuva" />
+      <h3>Shampoo</h3>
+      <p>Hellävarainen ja kosteuttava shampoo kissalle.</p>
       <button>Lisää ostoskoriin</button>
     </div>
     <div className="product-item">
-      <img src="https://picsum.photos/id/1015/400/300" alt="tuotteen kuva" />
-      <h3>Tuote 4</h3>
-      <p>Kuvaus tuotteesta 4.</p>
+      <img src={kissaruoka} alt="tuotteen kuva" />
+      <h3>Kissan kuivaruoka</h3>
+      <p>Erityisen maistuva täysravinto sisältää leikatun kissasi hyvinvointia helliviä aineksia, kuten hyvin sulavaa kanaa, vihanneksia, hedelmiä, lohiöljyä ja prebiootteja.</p>
       <button>Lisää ostoskoriin</button>
     </div>
     
     <div className="product-item">
-      <img src="https://picsum.photos/id/1022/400/300" alt="tuotteen kuva" />
-      <h3>Tuote 5</h3>
-      <p>Kuvaus tuotteesta 5.</p>
+      <img src={kissapuu} alt="tuotteen kuva" />
+      <h3>Raapimapuu</h3>
+      <p>Raapimapuussa on runsas valikoima oleskelu- ja vahtimistasoja, kolme kynsiä kutsuvaa tolppaa ja mm. irrotettava tyyny.</p>
       <button>Lisää ostoskoriin</button>
     </div>
     <div className="product-item">
-      <img src="https://picsum.photos/id/1023/400/300" alt="tuotteen kuva" />
-      <h3>Tuote 6</h3>
-      <p>Kuvaus tuotteesta 6.</p>
+      <img src={valjaat} alt="tuotteen kuva" />
+      <h3>Koiran valjaat</h3>
+      <p>Kestävä treenivaljas on optimaalinen valinta aktiivisille ja voimakkaille koirille. </p>
       <button>Lisää ostoskoriin</button>
     </div>
     <div className="product-item">
-      <img src="https://picsum.photos/id/1022/400/300" alt="tuotteen kuva" />
-      <h3>Tuote 7</h3>
-      <p>Kuvaus tuotteesta 7.</p>
+      <img src={laser} alt="tuotteen kuva" />
+      <h3>Laserlelu</h3>
+      <p>Klassinen laserlelu hauskuuttaa pitkään niin kissaa kuin omistajaakin.</p>
       <button>Lisää ostoskoriin</button>
     </div>
     <div className="product-item">
-      <img src="https://picsum.photos/id/1022/400/300" alt="tuotteen kuva" />
-      <h3>Tuote 8</h3>
-      <p>Kuvaus tuotteesta 8.</p>
+      <img src={luu} alt="tuotteen kuva" />
+      <h3>Puruluu</h3>
+      <p>puruluu on valmistettu laadukkaasta, yhtenäisestä naudannahasta käsin rullaamalla ja koneella puristamalla</p>
       <button>Lisää ostoskoriin</button>
     </div>
   </div>
