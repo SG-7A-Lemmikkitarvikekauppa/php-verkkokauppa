@@ -16,6 +16,6 @@ function Tuoteryhmat() {
     </div>
   );
 }
-
+//
 export default Tuoteryhmat;
 
