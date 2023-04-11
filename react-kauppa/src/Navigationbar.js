@@ -11,6 +11,7 @@ import Koirat from './koirat';
 import Kissanlelut from './KissatRuoka';
 import { Dropdown } from 'react-bootstrap';
 import KissanRuoka from './KissatRuoka';
+import Ostoskori from './ostoskori';
 
 
 function NavigationBar() {
@@ -70,7 +71,7 @@ function NavigationBar() {
                   <Link to="/yhteystiedot" className="nav-link">Yhteystiedot</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link disabled">Disabled</a>
+                  <Link to="/ostoskori" className="nav-link">Ostoskori</Link>
                 </li>
               </ul>
             </div>
@@ -86,6 +87,7 @@ function NavigationBar() {
             <Route path="/koirat" component={Koirat} />
             <Route path="/KissatLelut" component={Kissanlelut} />
             <Route path="/Kissatruoka" component={KissanRuoka} />
+            <Route path="/Ostoskori" component={Ostoskori} />
 
           </Routes>
         </div>
