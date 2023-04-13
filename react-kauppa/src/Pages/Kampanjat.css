@@ -1,0 +1,45 @@
+/* Styles for CampaignPage component */
+
+/* Wrapper div */
+#Kampanjat {
+    margin: 2rem;
+    }
+    
+    /* Heading for the page */
+    #h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    }
+    
+    /* Campaign title */
+    #h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    }
+    
+    /* Campaign description */
+    #p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    }
+    
+    /* Campaign end date */
+    #p2 {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    }
+    
+    /* Link style */
+    a {
+    color: blue;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    }
+    
+    /* Link style on hover */
+    a:hover {
+    text-decoration: underline;
+    }

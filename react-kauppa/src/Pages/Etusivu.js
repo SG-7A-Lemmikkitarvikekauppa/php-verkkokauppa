@@ -1,7 +1,6 @@
-import './App.css';
+import './App1.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import logo from './korianruoka.png';
 import pallo from './pallokoira.jpg';
 import shampoo from './shampoo.png';
@@ -16,7 +15,7 @@ function Etusivu() {
       <div>
         <section>
           <h2>Tervetuloa verkkokauppaan!</h2>
-          <p>Tervetuloa tutustumaan laajaan valikoimaamme! Meiltä löydät laadukkaat tuotteet koirille, kissoille ja muille lemmikeille.</p>
+          <p>Tervetuloa tutustumaan laajaan valikoimaamme! Meiltä löydät laadukkaat tuotteet kaiken kokoisille koirille ja kissoille.</p>
         </section>
         <section>
           <h2>Suosituimmat tuotteemme</h2>

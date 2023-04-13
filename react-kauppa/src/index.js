@@ -1,16 +1,17 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import NavigationBar from './Navigationbar';
-import Etusivu from './Etusivu';
-import Kissat from './kissat';
-import Koirat from './koirat';
+import './index.css';
+import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
 
 createRoot(document.getElementById('root')).render(
 <React.StrictMode>
-<NavigationBar />
-<Etusivu />
-<Kissat />
-<Koirat />
+<BrowserRouter />
+
+<App />
+
+
+<BrowserRouter />
 </React.StrictMode>
 );
