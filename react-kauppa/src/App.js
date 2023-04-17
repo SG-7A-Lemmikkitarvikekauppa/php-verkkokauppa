@@ -17,11 +17,15 @@ import Tarjouksetkaikki from './Pages/Tarjouksetkaikki';
 import Tarjouksetkissat from './Pages/Tarjouksetkissat';
 import Tarjouksetkoirat from './Pages/Tarjouksetkoirat';
 import Poistonurkka from './Pages/Poistonurkka';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 function App() {
   return (
     <Router>
+      <Header />
       <NavigationBar />
+      
       <div className='container'>
         <Routes>
           <Route path="Etusivu" element={<Etusivu />} />
@@ -41,7 +45,13 @@ function App() {
           <Route path="Yhteystiedot" element={<Yhteystiedot />} />
         </Routes>
       </div>
+
+      <Footer />
+
     </Router>
+
+    
+
   )
 }
 
