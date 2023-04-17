@@ -32,7 +32,7 @@ export default function NavigationBar() {
                             <Dropdown.Item as={Link} to='/KissatRuoka'> Ruoka</Dropdown.Item>
                             <Dropdown.Item as={Link} to='kissatHoito'>Hoito ja huolenpito</Dropdown.Item>
                     </Dropdown.Menu>
-                          </Dropdown>
+              </Dropdown>
                 </li>
 
                 <li className="nav-item">
@@ -51,9 +51,19 @@ export default function NavigationBar() {
 
 
                 </li>
-                <li className="nav-item">
-                  <Link className='nav-link' to="/kampanjat" >Kampanjat</Link>
-                </li>
+                <Dropdown>
+                    <Dropdown.Toggle variant="light" id="dropdown-basic">
+                      Tarjoukset
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item as={Link} to='/Tarjouksetkaikki'> Kaikki tarjoukset </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/Tarjouksetkissat'>  Kissoille </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/Tarjouksetkoirat'>  Koirille</Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/Tarjouksetjasen'>  Jäsenille </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/Poistonurkka'>  Poistonurkka </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 <li className="nav-item">
                   <Link className='nav-link' to="/yhteystiedot" >Yhteystiedot</Link>
                 </li>
