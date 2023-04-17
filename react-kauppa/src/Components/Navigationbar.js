@@ -31,6 +31,7 @@ export default function NavigationBar() {
                             <Dropdown.Item as={Link} to='/KissatLelut'> Lelut </Dropdown.Item>
                             <Dropdown.Item as={Link} to='/KissatRuoka'> Ruoka</Dropdown.Item>
                             <Dropdown.Item as={Link} to='kissatHoito'>Hoito ja huolenpito</Dropdown.Item>
+                            <Dropdown.Item as={Link} to='/Kissatmuut'> Muut </Dropdown.Item>
                     </Dropdown.Menu>
               </Dropdown>
                 </li>
@@ -46,6 +47,7 @@ export default function NavigationBar() {
                         <Dropdown.Item as={Link} to='/KoiratRuoka'>  Ruoka </Dropdown.Item>
                         <Dropdown.Item as={Link} to='/koiratHoito'>  Hoito ja huolenpito</Dropdown.Item>
                         <Dropdown.Item as={Link} to='/ulkoilu'>  Ulkoilu </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/Koiratmuut'>  Muut </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
 

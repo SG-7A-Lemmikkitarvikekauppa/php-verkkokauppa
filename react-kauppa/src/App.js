@@ -19,6 +19,8 @@ import Tarjouksetkoirat from './Pages/Tarjouksetkoirat';
 import Poistonurkka from './Pages/Poistonurkka';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import Kissatmuut from './Pages/Kissatmuut';
+import Koiratmuut from './Pages/Koiratmuut';
 
 function App() {
   return (
@@ -32,11 +34,13 @@ function App() {
           <Route path="KissatHoito" element={<KissatHoito />} />
           <Route path="KissatLelut" element={<Kissanlelut />} />
           <Route path="KissatRuoka" element={<KissanRuoka />} />
+          <Route path="Kissatmuut" element={<Kissatmuut />} />
           <Route path="KoiratHoito" element={<KoiratHoito />} />
           <Route path="KoiratRuoka" element={<KoiranRuoka />} />
           <Route path="KoiratLelut" element={<KoiranLelut />} />
           <Route path="Ostoskori" element={<Ostoskori />} />
           <Route path="Ulkoilu" element={<Ulkoilu />} />
+          <Route path="Koiratmuut" element={<Koiratmuut />} />
           <Route path="Tarjouksetkaikki" element={<Tarjouksetkaikki />} />
           <Route path="Tarjouksetkissat" element={<Tarjouksetkissat />} />
           <Route path="Tarjouksetkoirat" element={<Tarjouksetkoirat />} />
