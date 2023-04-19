@@ -22,6 +22,9 @@ import Footer from './Components/Footer';
 import Kissatmuut from './Pages/Kissatmuut';
 import Koiratmuut from './Pages/Koiratmuut';
 
+const URL = 'http://localhost:3000/lemmikkikauppa/';
+
+
 function App() {
   return (
     <Router>

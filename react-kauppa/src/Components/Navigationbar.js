@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
 
 
-export default function NavigationBar() {
-  
+export default function NavigationBar({url}) {
+  const [categories, setCategories] = useState([]);
+
+
+useEffect(() => {
+  axios.get(url + 'tuotteet/getcategories.php')
+  .then((response) => {
+    const json = response.data;
+    setCategories(json);
+    console.log(json);
+  }).catch (error => {
+    alert(error.response === undefined ? error : error.response.data.error);
+  })
+}, [])
+
   return (
   
       <div id="etusivu">
@@ -30,7 +44,7 @@ export default function NavigationBar() {
                      
                             <Dropdown.Item as={Link} to='/KissatLelut'> Lelut </Dropdown.Item>
                             <Dropdown.Item as={Link} to='/KissatRuoka'> Ruoka</Dropdown.Item>
-                            <Dropdown.Item as={Link} to='kissatHoito'>Hoito ja huolenpito</Dropdown.Item>
+                            <Dropdown.Item as={Link} to='/kissatHoito'>Hoito ja huolenpito</Dropdown.Item>
                             <Dropdown.Item as={Link} to='/Kissatmuut'> Muut </Dropdown.Item>
                     </Dropdown.Menu>
               </Dropdown>
