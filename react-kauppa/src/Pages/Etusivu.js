@@ -1,5 +1,5 @@
 import './App1.css';
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './korianruoka.png';
 import pallo from './pallokoira.jpg';
@@ -9,8 +9,29 @@ import kissapuu from './kissapuu.jpg';
 import valjaat from './koiravaljaat.jpg';
 import laser from './kissalaser.jpg';
 import luu from './koiraluu.jpg';
+import axios from "axios";
+import Tuotekortti from '../Components/Tuotekortti';
+
+const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/'
 
 function Etusivu() {
+  const [ruoka, setRuoka] = useState("");
+
+  useEffect(() => {
+    console.log(URL);
+  
+    axios.get(URL + "products/getruoka.php")
+      .then((response) => {
+        const json = response.data;
+        setRuoka(json);
+        console.log(json);
+      })
+      .catch((error) => {
+        alert(error.response === undefined ? error : error.response.data.error);
+      });
+  }, []);
+  
+
     return (
       <div>
         <section>
@@ -19,13 +40,13 @@ function Etusivu() {
         </section>
         <section>
           <h2>Suosituimmat tuotteemme</h2>
+
+          
+
           <div className="product-grid">
-    <div className="product-item">
-      <img src= {logo} alt="tuotteen kuva" />
-      <h3>Koiran kuivaruoka 5KG</h3>
-      <p>Täysipainoinen, runsaasti kanaa sisältävä täysravinto kookkaaksi kasvaville pennuille. Turvaa tasapainoista kasvua ja sisältää mm. kehityksen kannalta tärkeää omega-3-rasvahappoa.</p>
-      <button>Lisää ostoskoriin</button>
-    </div>
+    
+      <Tuotekortti />
+
     <div className="product-item">
       <img src= {pallo} alt="tuotteen kuva" />
       <h3>pallo</h3>

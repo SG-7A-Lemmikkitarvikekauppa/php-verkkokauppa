@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Dropdown } from 'react-bootstrap';
 
 
+
 export default function NavigationBar() {
+
+  const [kategoriat, setKategoriat] = useState([]);
+
+  useEffect (() => {
+  
+    
+
+  }, [] )
   
   return (
   

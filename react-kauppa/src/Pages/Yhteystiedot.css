@@ -1,0 +1,19 @@
+.yhteystiedot {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    
+  }
+  
+  .heading {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .paragraph {
+    margin-bottom: 5px;
+  }
+
+  .heading {
+    text-align: center;
+  }

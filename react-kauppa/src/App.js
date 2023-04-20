@@ -21,6 +21,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Kissatmuut from './Pages/Kissatmuut';
 import Koiratmuut from './Pages/Koiratmuut';
+import Tuotekortti from './Components/Tuotekortti';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="Tarjouksetjasen" element={<Tarjouksetjasen />} />
           <Route path="Poistonurkka" element={<Poistonurkka />} />
           <Route path="Yhteystiedot" element={<Yhteystiedot />} />
+          <Route path="Tuotekortti" element={<Tuotekortti />} />
         </Routes>
       </div>
 
