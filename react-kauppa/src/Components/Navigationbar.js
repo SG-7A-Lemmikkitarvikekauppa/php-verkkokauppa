@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
 
 
 
 export default function NavigationBar() {
-
-  const [kategoriat, setKategoriat] = useState([]);
-
-  useEffect (() => {
-  
-    
-
-  }, [] )
   
   return (
   
@@ -39,7 +32,7 @@ export default function NavigationBar() {
                      
                             <Dropdown.Item as={Link} to='/KissatLelut'> Lelut </Dropdown.Item>
                             <Dropdown.Item as={Link} to='/KissatRuoka'> Ruoka</Dropdown.Item>
-                            <Dropdown.Item as={Link} to='kissatHoito'>Hoito ja huolenpito</Dropdown.Item>
+                            <Dropdown.Item as={Link} to='/kissatHoito'>Hoito ja huolenpito</Dropdown.Item>
                             <Dropdown.Item as={Link} to='/Kissatmuut'> Muut </Dropdown.Item>
                     </Dropdown.Menu>
               </Dropdown>
