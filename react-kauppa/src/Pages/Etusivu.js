@@ -15,7 +15,7 @@ import Tuotekortti from '../Components/Tuotekortti';
 const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/'
 
 function Etusivu() {
-  const [ruoka, setRuoka] = useState("");
+  const [ruoka, setRuoka] = useState([]);
 
   useEffect(() => {
     console.log(URL);
@@ -45,7 +45,9 @@ function Etusivu() {
 
           <div className="product-grid">
     
-      <Tuotekortti />
+     {ruoka.map((tuote) => (
+        <Tuotekortti key={tuote.id} tuotelista={tuote} />
+      ))}
 
     <div className="product-item">
       <img src= {pallo} alt="tuotteen kuva" />
