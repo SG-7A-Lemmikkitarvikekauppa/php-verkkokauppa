@@ -8,8 +8,9 @@ import logo from './kissaherkku.jpg';
   return (
     <div className="product-item">
       <img src= {logo} alt="tuotteen kuva" />
-      <h3> {tuotelista.id} {tuotelista.rtyyppi}  </h3>
-      <p>Täysipainoinen, runsaasti kanaa sisältävä täysravinto kookkaaksi kasvaville pennuille. Turvaa tasapainoista kasvua ja sisältää mm. kehityksen kannalta tärkeää omega-3-rasvahappoa.</p>
+      <h3> {tuotelista.nimi}  </h3>
+      <p> {tuotelista.kuvaus} </p>
+      <p> {tuotelista.hinta},00 €</p>
       <button>Lisää ostoskoriin</button>
     </div>
   )

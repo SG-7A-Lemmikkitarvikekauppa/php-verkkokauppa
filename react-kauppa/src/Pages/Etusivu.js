@@ -1,7 +1,6 @@
 import './App1.css';
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './korianruoka.png';
 import pallo from './pallokoira.jpg';
 import shampoo from './shampoo.png';
 import kissaruoka from './kissaruoka.jpg';
