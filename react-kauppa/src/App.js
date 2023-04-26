@@ -24,7 +24,6 @@ import Kissatmuut from './Pages/Kissatmuut';
 import Koiratmuut from './Pages/Koiratmuut';
 import Tuotekortti from './Components/Tuotekortti';
 import Tuotteet from './Components/tuotteet';
-import Tuotekortti from './Components/tuotekortti1';
 
 
 const URL = 'http://localhost:3000/';
@@ -56,8 +55,6 @@ function App() {
           <Route path="Poistonurkka" element={<Poistonurkka />} />
           <Route path="Yhteystiedot" element={<Yhteystiedot />} />
           <Route path="Tuotekortti" element={<Tuotekortti />} />
-          <Route path="Tuotekortti1" element={<Tuotekortti1 />} />
-
           <Route path="tuotteet" element={<Tuotteet />} />
         </Routes>
       </div>
