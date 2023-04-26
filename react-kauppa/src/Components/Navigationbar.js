@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
 import KissatHoito from '../Pages/kissatHoito';
 import Kissatlelut from '../Pages/KissatLelut';
+import KoiratLelut from '../Pages/KoiratLelut';
 
 
 export default function NavigationBar() {
@@ -100,7 +101,7 @@ export default function NavigationBar() {
                     <li key={tuoteryhma.id} kategoria={tuoteryhma}>
                       <Link
                         className="dropdown-item"
-                        to='./products/'
+                        to={'/KoiratLelut'}
                       >
                        <p> {tuoteryhma.nimi} </p>
 

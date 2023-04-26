@@ -1,7 +1,7 @@
 import React from 'react'
-import logo from '../images/korianruoka.png';
+import logo from '../images/pallokoira.jpg';
 
- function Tuotekortti({tuotelista}) {
+ function Koiralelu({tuotelista}) {
 
  console.log({tuotelista});
 
@@ -16,4 +16,4 @@ import logo from '../images/korianruoka.png';
   )
 }
 
-export default Tuotekortti;
+export default Koiralelu;

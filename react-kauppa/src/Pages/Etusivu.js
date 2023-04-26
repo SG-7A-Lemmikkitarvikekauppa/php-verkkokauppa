@@ -62,7 +62,7 @@ function Etusivu() {
 
 
           <div className="product-grid">
-    
+      
      {ruoka.map((tuote) => (
         <Tuotekortti key={tuote.id} tuotelista={tuote} />
       ))}
