@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import axios from 'axios';
 import Etusivu from './Pages/Etusivu';
 import Yhteystiedot from './Pages/Yhteystiedot';
 import NavigationBar from './Components/Navigationbar';
