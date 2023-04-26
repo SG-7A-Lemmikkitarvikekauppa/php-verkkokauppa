@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './kissaherkku.jpg';
+import logo from '../images/kissaherkku.jpg';
 
  function Tuotekortti({tuotelista}) {
 
