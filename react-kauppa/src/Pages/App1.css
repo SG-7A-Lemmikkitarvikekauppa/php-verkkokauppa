@@ -107,6 +107,13 @@
     margin-bottom: 2rem;
     text-align: center;
   }
+
+  .hoo2{
+    text-align: center;
+    background-color: chartreuse;
+
+    margin: 2rem;
+  }
   
   p {
     font-size: 1.2rem;

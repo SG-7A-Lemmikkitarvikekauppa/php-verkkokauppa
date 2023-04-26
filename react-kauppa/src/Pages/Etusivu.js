@@ -10,11 +10,13 @@ import laser from '../images/kissalaser.jpg';
 import luu from '../images/koiraluu.jpg';
 import axios from "axios";
 import Tuotekortti from '../Components/Tuotekortti';
+import Tuotelista from '../Components/Tuotelista';
 
 const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/'
 
 function Etusivu() {
   const [ruoka, setRuoka] = useState([]);
+  const [lelu, setLelu] = useState([]);
 
 
   useEffect(() => {
@@ -31,6 +33,21 @@ function Etusivu() {
       });
   }, []);
 
+
+  useEffect(() => {
+    console.log(URL);
+  
+    axios.get(URL + "products/getlelut.php")
+      .then((response) => {
+        const json = response.data;
+        setLelu(json);
+        console.log(json);
+      })
+      .catch((error) => {
+        alert(error.response === undefined ? error : error.response.data.error);
+      });
+  }, []);
+
   
 
     return (
@@ -40,20 +57,29 @@ function Etusivu() {
           <p>Tervetuloa tutustumaan laajaan valikoimaamme! Meiltä löydät laadukkaat tuotteet kaiken kokoisille koirille ja kissoille.</p>
         </section>
         <section>
-          <h2>Suosituimmat tuotteemme</h2>
+          <h2>Suosituimmat Ruoat</h2>
 
-          
+
 
           <div className="product-grid">
     
      {ruoka.map((tuote) => (
         <Tuotekortti key={tuote.id} tuotelista={tuote} />
       ))}
-   
+          </div>
+      <div>
+        <h2 className="hoo2">
+          Suosituimmat lelut
+        </h2>
+      </div>
+      <div className="product-grid">
+        {lelu.map((tuote) => (
+        <Tuotelista key={tuote.id} tuotelista={tuote} />
+      ))}
+      </div>
 
 
-
-  </div>
+  
   
         </section>
        

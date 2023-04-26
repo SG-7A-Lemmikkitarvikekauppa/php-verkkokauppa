@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useEffect, useState } from 'react';
+
+
+const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/'
 
 export default function Tuotteet() {
   return (
     <div>
-      dfgiyegfic
+      Kaikki kissojen lelut
     </div>
   )
 }
