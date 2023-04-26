@@ -30,7 +30,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <NavigationBar />
+      <NavigationBar url={URL} />
       
       <div className='container'>
         <Routes>
