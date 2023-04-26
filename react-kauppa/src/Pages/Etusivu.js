@@ -10,7 +10,6 @@ import laser from '../images/kissalaser.jpg';
 import luu from '../images/koiraluu.jpg';
 import axios from "axios";
 import Tuotekortti from '../Components/Tuotekortti';
-import tuotekortti1 from '../Components/tuotekortti1';
 
 const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/'
 
@@ -50,11 +49,6 @@ function Etusivu() {
      {ruoka.map((tuote) => (
         <Tuotekortti key={tuote.id} tuotelista={tuote} />
       ))}
-
-    {ruoka.map((tuote) => (
-      <tuotekortti1 key={tuote.id} tuotelista={tuote} />
-    ))}
-
    
 
 
