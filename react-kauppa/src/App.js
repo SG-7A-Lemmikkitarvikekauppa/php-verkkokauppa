@@ -22,8 +22,9 @@ import Footer from './Components/Footer';
 import Kissatmuut from './Pages/Kissatmuut';
 import Koiratmuut from './Pages/Koiratmuut';
 import Tuotekortti from './Components/Tuotekortti';
+import Tuotteet from './Components/tuotteet';
 
-const URL = 'http://localhost:3000/lemmikkikauppa/';
+const URL = 'http://localhost:3000/';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
           <Route path="Poistonurkka" element={<Poistonurkka />} />
           <Route path="Yhteystiedot" element={<Yhteystiedot />} />
           <Route path="Tuotekortti" element={<Tuotekortti />} />
+          <Route path="tuotteet" element={<Tuotteet />} />
         </Routes>
       </div>
 

@@ -69,7 +69,7 @@ export default function NavigationBar() {
                     <li key={tuoteryhma.id} kategoria={tuoteryhma}>
                       <Link
                         className="dropdown-item"
-                        to={tuoteryhma.nimi}
+                        to='/tuotteet'
                       >
                        <p> {tuoteryhma.nimi} </p>
 
