@@ -1,13 +1,13 @@
 import './App1.css';
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import pallo from './pallokoira.jpg';
-import shampoo from './shampoo.png';
-import kissaruoka from './kissaruoka.jpg';
-import kissapuu from './kissapuu.jpg';
-import valjaat from './koiravaljaat.jpg';
-import laser from './kissalaser.jpg';
-import luu from './koiraluu.jpg';
+import pallo from '../images/pallokoira.jpg';
+import shampoo from '../images/shampoo.png';
+import kissaruoka from '../images/kissaruoka.jpg';
+import kissapuu from '../images/kissapuu.jpg';
+import valjaat from '../images/koiravaljaat.jpg';
+import laser from '../images/kissalaser.jpg';
+import luu from '../images/koiraluu.jpg';
 import axios from "axios";
 import Tuotekortti from '../Components/Tuotekortti';
 
