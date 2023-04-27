@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import axios from "axios";
-import Kissalelu from '../Components/kissalelu';
+import Kissalelu from '../Components/Kissalelu';
 
 
 const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/'

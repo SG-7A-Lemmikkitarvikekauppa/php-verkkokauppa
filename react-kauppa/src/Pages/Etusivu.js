@@ -1,13 +1,7 @@
 import './App1.css';
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import pallo from '../images/pallokoira.jpg';
-import shampoo from '../images/shampoo.png';
-import kissaruoka from '../images/kissaruoka.jpg';
-import kissapuu from '../images/kissapuu.jpg';
-import valjaat from '../images/koiravaljaat.jpg';
-import laser from '../images/kissalaser.jpg';
-import luu from '../images/koiraluu.jpg';
+
 import axios from "axios";
 import Tuotekortti from '../Components/Tuotekortti';
 import Tuotelista from '../Components/Tuotelista';

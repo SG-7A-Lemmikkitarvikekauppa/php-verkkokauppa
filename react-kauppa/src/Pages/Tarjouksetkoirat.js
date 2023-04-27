@@ -2,9 +2,9 @@ import './Kampanjat.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './korianruoka.png';
-import pallo from './pallokoira.jpg';
+import pallo from '../images/pallokoira.jpg';
 import valjaat from './koiravaljaat.jpg';
-import luu from './koiraluu.jpg';
+import luu from '../images/koiraluu.jpg';
 
  function Tarjouksetkoirat() {
   return (
