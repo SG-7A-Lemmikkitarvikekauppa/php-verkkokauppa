@@ -10,7 +10,7 @@ import logo from '../images/kissalaser.jpg';
       <img src= {logo} alt="tuotteen kuva" />
       <h3> {tuotelista.nimi}  </h3>
       <p> {tuotelista.kuvaus} </p>
-      <p> {tuotelista.hinta},00 €</p>
+      <p> {tuotelista.hinta} juuu00 €</p>
       <button>Lisää ostoskoriin</button>
     </div>
   )
