@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
 import KissatHoito from '../Pages/kissatHoito';
-//
+
 
 export default function NavigationBar() {
   const [tuoteryhmat, setTuoteryhmat] = useState([]);
