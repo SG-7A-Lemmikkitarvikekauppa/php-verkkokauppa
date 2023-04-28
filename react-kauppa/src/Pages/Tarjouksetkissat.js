@@ -1,9 +1,9 @@
 import React from 'react'
 import './Kampanjat.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import shampoo from '../images/shampoo.png';
-import kissaruoka from '../images/kissaruoka.jpg';
-import kissapuu from '../images/kissapuu.jpg';
+import shampoo from './shampoo.png';
+import kissaruoka from './kissaruoka.jpg';
+import kissapuu from './kissapuu.jpg';
 import laser from '../images/kissalaser.jpg';
 
 

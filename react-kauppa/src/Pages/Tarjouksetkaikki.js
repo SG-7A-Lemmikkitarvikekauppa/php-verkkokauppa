@@ -1,12 +1,12 @@
 import './Kampanjat.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../images/korianruoka.png';
+import logo from './korianruoka.png';
 import pallo from '../images/pallokoira.jpg';
-import shampoo from '../images/shampoo.png';
-import kissaruoka from '../images/kissaruoka.jpg';
-import kissapuu from '../images/kissapuu.jpg';
-import valjaat from '../images/koiravaljaat.jpg';
+import shampoo from './shampoo.png';
+import kissaruoka from './kissaruoka.jpg';
+import kissapuu from './kissapuu.jpg';
+import valjaat from './koiravaljaat.jpg';
 import laser from '../images/kissalaser.jpg';
 import luu from '../images/koiraluu.jpg';
 

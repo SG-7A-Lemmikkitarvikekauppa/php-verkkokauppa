@@ -69,7 +69,7 @@ export default function NavigationBar() {
                     <li key={tuoteryhma.id} kategoria={tuoteryhma}>
                       <Link
                         className="dropdown-item"
-                        to='/tuotteet'
+                        to='/KissatLelut'
                       >
                        <p> {tuoteryhma.nimi} </p>
 
@@ -98,7 +98,7 @@ export default function NavigationBar() {
                     <li key={tuoteryhma.id} kategoria={tuoteryhma}>
                       <Link
                         className="dropdown-item"
-                        to='./products/'
+                        to='./Koiratlelut/'
                       >
                        <p> {tuoteryhma.nimi} </p>
 
