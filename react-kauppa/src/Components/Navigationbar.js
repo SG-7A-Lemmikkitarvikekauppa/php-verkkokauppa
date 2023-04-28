@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
 import KissatHoito from '../Pages/kissatHoito';
-import Kissatlelut from '../Pages/KissatLelut';
-import KoiratLelut from '../Pages/KoiratLelut';
 
 
 export default function NavigationBar() {
@@ -19,7 +17,7 @@ export default function NavigationBar() {
       .then((response) => {
         const json = response.data;
         setTuoteryhmat(json);
-        console.log(json);
+        
       })
       .catch((error) => {
         alert(error.response?.data?.error || error);
@@ -31,7 +29,7 @@ export default function NavigationBar() {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Purrfects Pets
+            Purrfect Pets
           </a>
           <button
             className="navbar-toggler"
@@ -67,15 +65,14 @@ export default function NavigationBar() {
                   className="dropdown-menu"
                   aria-labelledby="dropdown01"
                 >
-                  {tuoteryhmat.map((tuoteryhma) => (
-                    <li key={tuoteryhma.id} kategoria={tuoteryhma}>
+                  {tuoteryhmat.map((tuote) => (
+                    <li key={tuote.tuoteid} kategoria={tuote}>
                       <Link
                         className="dropdown-item"
-
-                        to={'/KissatLelut'}
+                        to={'/tuotteet/' + tuote.tuoteid}
                       >
-                       <p> {tuoteryhma.nimi} </p>
-                        
+                       <p> {tuote.nimi} </p>
+
                       </Link>
                     </li>
                   ))}
@@ -101,7 +98,7 @@ export default function NavigationBar() {
                     <li key={tuoteryhma.id} kategoria={tuoteryhma}>
                       <Link
                         className="dropdown-item"
-                        to={'/KoiratLelut'}
+                        to='./Koiratlelut/'
                       >
                        <p> {tuoteryhma.nimi} </p>
 

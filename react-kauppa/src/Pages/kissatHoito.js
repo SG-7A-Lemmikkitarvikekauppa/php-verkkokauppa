@@ -26,7 +26,7 @@ import axios from "axios";
   
   return (
     <div>
-      <p> igurjlbfjaaa </p>
+      <p> igurjlbf </p>
     </div>
   )
 }

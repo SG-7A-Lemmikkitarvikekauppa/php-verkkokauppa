@@ -1,10 +1,10 @@
 import React from 'react'
 import './Kampanjat.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import shampoo from '../images/shampoo.png';
-import kissaruoka from '../images/kissaruoka.jpg';
-import kissapuu from '../images/kissapuu.jpg';
-import laser from '../images/kissalaser.jpg';
+// import shampoo from './shampoo.png';
+// import kissaruoka from './kissaruoka.jpg';
+// import kissapuu from './kissapuu.jpg';
+// import laser from '../images/kissalaser.jpg';
 
 
  function Tarjouksetkissat() {
@@ -21,7 +21,7 @@ import laser from '../images/kissalaser.jpg';
   
     <div className="product-item">
     <div className="product-item">
-  <img src={shampoo} alt="tuotteen kuva" />
+  <img  />
     <span className="sale-badge">ALE</span>
     <span className="discount-badge40">-40%</span>
     <h3>Shampoo</h3>
@@ -31,7 +31,7 @@ import laser from '../images/kissalaser.jpg';
 </div>
     </div>
     <div className="product-item">
-      <img src={kissaruoka} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Kissan kuivaruoka 2 KG</h3>
@@ -41,7 +41,7 @@ import laser from '../images/kissalaser.jpg';
     </div>
 
     <div className="product-item">
-      <img src={kissapuu} alt="tuotteen kuva" />
+      <img />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge40">-40%</span>
       <h3>Raapimapuu</h3>
@@ -51,7 +51,7 @@ import laser from '../images/kissalaser.jpg';
     </div>
     
     <div className="product-item">
-      <img src={laser} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Laserlelu</h3>

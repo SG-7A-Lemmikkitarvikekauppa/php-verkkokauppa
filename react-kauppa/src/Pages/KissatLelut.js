@@ -1,9 +1,9 @@
 import './App1.css';
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Kissalelu from '../Components/Kissalelu';
 
 import axios from "axios";
-import Kissalelu from '../Components/kissalelu';
 
 
 const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/'
@@ -15,7 +15,7 @@ function KissatLelut() {
 
   useEffect(() => {
     console.log(URL);
-  
+
     axios.get(URL + "products/getkissalelu.php")
       .then((response) => {
         const json = response.data;
@@ -28,27 +28,27 @@ function KissatLelut() {
   }, []);
 
 
-  
+
 
     return (
       <div>
         <section>
           <h2>Täältä löydät kissojen lelut</h2>
-          
+
         </section>
         <section>
 
           <div className="product-grid">
-    
+
      {kissalelu.map((tuote) => (
         <Kissalelu key={tuote.id} tuotelista={tuote} />
       ))}
           </div>
 
-  
-  
+
+
         </section>
-       
+
       </div>
     );
   }

@@ -1,13 +1,7 @@
 import './App1.css';
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import pallo from '../images/pallokoira.jpg';
-import shampoo from '../images/shampoo.png';
-import kissaruoka from '../images/kissaruoka.jpg';
-import kissapuu from '../images/kissapuu.jpg';
-import valjaat from '../images/koiravaljaat.jpg';
-import laser from '../images/kissalaser.jpg';
-import luu from '../images/koiraluu.jpg';
+
 import axios from "axios";
 import Tuotekortti from '../Components/Tuotekortti';
 import Tuotelista from '../Components/Tuotelista';
@@ -21,7 +15,7 @@ function Etusivu() {
 
   useEffect(() => {
     console.log(URL);
-  
+
     axios.get(URL + "products/getruoka.php")
       .then((response) => {
         const json = response.data;
@@ -36,7 +30,7 @@ function Etusivu() {
 
   useEffect(() => {
     console.log(URL);
-  
+
     axios.get(URL + "products/getlelut.php")
       .then((response) => {
         const json = response.data;
@@ -47,10 +41,7 @@ function Etusivu() {
         alert(error.response === undefined ? error : error.response.data.error);
       });
   }, []);
-
-  
-
-    return (
+return (
       <div>
         <section>
           <h2>Tervetuloa verkkokauppaan!</h2>
@@ -62,13 +53,15 @@ function Etusivu() {
 
 
           <div className="product-grid">
-      
+
      {ruoka.map((tuote) => (
         <Tuotekortti key={tuote.id} tuotelista={tuote} />
       ))}
           </div>
       <div>
         <h2 className="hoo2">
+
+          
           Suosituimmat lelut
         </h2>
       </div>
@@ -79,10 +72,10 @@ function Etusivu() {
       </div>
 
 
-  
-  
+
+
         </section>
-       
+
       </div>
     );
   }

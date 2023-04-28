@@ -1,14 +1,15 @@
 import './Kampanjat.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../images/korianruoka.png';
-import pallo from '../images/pallokoira.jpg';
-import shampoo from '../images/shampoo.png';
-import kissaruoka from '../images/kissaruoka.jpg';
-import kissapuu from '../images/kissapuu.jpg';
-import valjaat from '../images/koiravaljaat.jpg';
-import laser from '../images/kissalaser.jpg';
-import luu from '../images/koiraluu.jpg';
+import Tuotekortti from '../Components/Tuotekortti';
+// import logo from './korianruoka.png';
+// import pallo from '../images/pallokoira.jpg';
+// import shampoo from './shampoo.png';
+// import kissaruoka from './kissaruoka.jpg';
+// import kissapuu from './kissapuu.jpg';
+// import valjaat from './koiravaljaat.jpg';
+// import laser from '../images/kissalaser.jpg';
+// import luu from '../images/koiraluu.jpg';
 
 function Tarjouksetkaikki() {
   return (
@@ -22,7 +23,7 @@ function Tarjouksetkaikki() {
           <div className="product-grid">
   
     <div className="product-item">
-      <img src= {pallo} alt="tuotteen kuva" />
+      <img src= {Tuotekortti.tuotekuva} alt="tuotteen kuva" />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Pentupallo</h3>
@@ -30,9 +31,9 @@ function Tarjouksetkaikki() {
       <p className='hinta'>Nyt vain 4,95€</p>
       <button>Lisää ostoskoriin</button>
     </div>
+     <div className="product-item">
     <div className="product-item">
-    <div className="product-item">
-  <img src={shampoo} alt="tuotteen kuva" />
+  <img src={Tuotekortti.tuotekuva} alt="tuotteen kuva" />
     <span className="sale-badge">ALE</span>
     <span className="discount-badge40">-40%</span>
     <h3>Shampoo</h3>
@@ -42,17 +43,17 @@ function Tarjouksetkaikki() {
 </div>
     </div>
     <div className="product-item">
-      <img src={kissaruoka} alt="tuotteen kuva" />
+      <img src={Tuotekortti.tuotekuva} alt="tuotteen kuva" />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Kissan kuivaruoka 2 KG</h3>
       <p> Miau & Nam - Kissanpennuille tarkoitettu kuivaruoka.Sisältää hyvin sulavaa kanaa, vihanneksia, hedelmiä ja lohiöljyä ja.</p>
       <p className='hinta'>Nyt vain 6,95€</p>
       <button>Lisää ostoskoriin</button>
-    </div>
+    </div> 
 
-    <div className="product-item">
-      <img src={valjaat} alt="tuotteen kuva" />
+     <div className="product-item">
+      <img src={Tuotekortti.tuotekuva} alt="tuotteen kuva" />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Koiran valjaat</h3>
@@ -62,7 +63,7 @@ function Tarjouksetkaikki() {
     </div>
     
     <div className='product-item'>
-      <img src= {logo} alt="tuotteen kuva" />
+      <img src= {Tuotekortti.tuotekuva} alt="tuotteen kuva" />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge50">-50%</span>
       <h3>Koiran kuivaruoka 3KG</h3>
@@ -72,7 +73,7 @@ function Tarjouksetkaikki() {
     </div>
 
     <div className="product-item">
-      <img src={luu} alt="tuotteen kuva" />
+      <img src={Tuotekortti.tuotekuva} alt="tuotteen kuva" />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Puruluu</h3>
@@ -82,7 +83,7 @@ function Tarjouksetkaikki() {
     </div>
 
     <div className="product-item">
-      <img src={kissapuu} alt="tuotteen kuva" />
+      <img src={Tuotekortti.tuotekuva} alt="tuotteen kuva" />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge40">-40%</span>
       <h3>Raapimapuu</h3>
@@ -92,7 +93,7 @@ function Tarjouksetkaikki() {
     </div>
     
     <div className="product-item">
-      <img src={laser} alt="tuotteen kuva" />
+      <img src={Tuotekortti.tuotekuva} alt="tuotteen kuva" />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Laserlelu</h3>
@@ -109,4 +110,4 @@ function Tarjouksetkaikki() {
   )
 }
 
-export default Tarjouksetkaikki;
+export default Tarjouksetkaikki;  

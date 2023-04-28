@@ -1,10 +1,10 @@
 import './Kampanjat.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../images/korianruoka.png';
-import pallo from '../images/pallokoira.jpg';
-import valjaat from '../images/koiravaljaat.jpg';
-import luu from '../images/koiraluu.jpg';
+// import logo from './korianruoka.png';
+// import pallo from '../images/pallokoira.jpg';
+// import valjaat from './koiravaljaat.jpg';
+// import luu from '../images/koiraluu.jpg';
 
  function Tarjouksetkoirat() {
   return (
@@ -18,7 +18,7 @@ import luu from '../images/koiraluu.jpg';
           <div className="product-grid">
   
     <div className="product-item">
-      <img src= {pallo} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Pentupallo</h3>
@@ -30,7 +30,7 @@ import luu from '../images/koiraluu.jpg';
     
 
     <div className="product-item">
-      <img src={valjaat} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Koiran valjaat</h3>
@@ -40,7 +40,7 @@ import luu from '../images/koiraluu.jpg';
     </div>
     
     <div className='product-item'>
-      <img src= {logo} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge50">-50%</span>
       <h3>Koiran kuivaruoka 3KG</h3>
@@ -50,7 +50,7 @@ import luu from '../images/koiraluu.jpg';
     </div>
 
     <div className="product-item">
-      <img src={luu} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Puruluu</h3>

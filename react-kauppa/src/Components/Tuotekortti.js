@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../images/korianruoka.png';
+
 
  function Tuotekortti({tuotelista}) {
 
@@ -7,7 +7,7 @@ import logo from '../images/korianruoka.png';
 
   return (
     <div className="product-item">
-      <img src= {logo} alt="tuotteen kuva" />
+      <img  />
       <h3> {tuotelista.nimi}  </h3>
       <p> {tuotelista.kuvaus} </p>
       <p> {tuotelista.hinta},00 €</p>
