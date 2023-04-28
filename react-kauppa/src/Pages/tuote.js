@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Tuotteet() {
+function tuote() {
   return (
     <div>
-      dfgiyegfic
+      
     </div>
   )
 }
+
+export default tuote

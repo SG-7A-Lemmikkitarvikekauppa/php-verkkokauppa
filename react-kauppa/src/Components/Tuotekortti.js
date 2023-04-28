@@ -1,16 +1,16 @@
 import React from 'react'
 
 
- function Tuotekortti({tuotekortti}) {
+ function Tuotekortti({tuotelista}) {
 
- console.log({tuotekortti});
+ console.log({tuotelista});
 
   return (
     <div className="product-item">
-      <img src= {tuotekortti.tuotekuva} alt="tuotteen kuva" />
-      <h3> {tuotekortti.nimi}  </h3>
-      <p> {tuotekortti.kuvaus} </p>
-      <p> {tuotekortti.hinta},00 €</p>
+      <img  />
+      <h3> {tuotelista.nimi}  </h3>
+      <p> {tuotelista.kuvaus} </p>
+      <p> {tuotelista.hinta},00 €</p>
       <button>Lisää ostoskoriin</button>
     </div>
   )

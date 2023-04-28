@@ -1,6 +1,7 @@
 import './App1.css';
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Koiralelu from '../Components/Koiralelu';
 
 import axios from "axios";
 

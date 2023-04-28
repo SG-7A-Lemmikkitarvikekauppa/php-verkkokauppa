@@ -6,7 +6,7 @@ import React from 'react'
 
   return (
     <div className="product-item">
-      <img src= {logo} alt="tuotteen kuva" />
+      <img  />
       <h3> {tuotelista.nimi}  </h3>
       <p> {tuotelista.kuvaus} </p>
       <p> {tuotelista.hinta}juu00 €</p>

@@ -18,7 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
           <div className="product-grid">
   
     <div className="product-item">
-      <img src= {pallo} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Pentupallo</h3>
@@ -30,7 +30,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
     
 
     <div className="product-item">
-      <img src={valjaat} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Koiran valjaat</h3>
@@ -40,7 +40,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
     </div>
     
     <div className='product-item'>
-      <img src= {logo} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge50">-50%</span>
       <h3>Koiran kuivaruoka 3KG</h3>
@@ -50,7 +50,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
     </div>
 
     <div className="product-item">
-      <img src={luu} alt="tuotteen kuva" />
+      <img  />
       <span className="sale-badge">ALE</span>
       <span className="discount-badge">-20%</span>
       <h3>Puruluu</h3>
