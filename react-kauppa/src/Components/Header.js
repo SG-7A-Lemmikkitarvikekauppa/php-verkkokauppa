@@ -7,12 +7,9 @@ import './Header.css';
 function Header() {
   return (
     <div className="header">
-      <div className="login">
-        <LoginForm />
-      </div>
-      <div className='Search'>
-      <SearchBar />
-      </div>
+    <div className="login">
+      <LoginForm />
+    </div>
     </div>
   );
 }
