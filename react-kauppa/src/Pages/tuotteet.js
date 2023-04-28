@@ -29,7 +29,7 @@ export default function Tuotteet() {
           <div>
             <img />
              <h3> {tuote.nimi} </h3>
-            <p>Tässä meidän mahtava tuotteemme</p>
+            <p>{tuote.kuvaus}</p>
             <p>{tuote.hinta}</p>
             <button>Lisää ostoskoriin</button>
           </div>
