@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, executeSearch } from 'react';
+import { Link, useNavigate,} from 'react-router-dom';
 import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
 import KissatHoito from '../Pages/kissatHoito';
 
 
-export default function NavigationBar() {
+
+
+export default function NavigationBar(){
   const [tuoteryhmat, setTuoteryhmat] = useState([]);
   const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/'
+
+  const [search, setSearch] = useState('');
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     console.log(URL);
@@ -23,6 +29,12 @@ export default function NavigationBar() {
         alert(error.response?.data?.error || error);
       });
   }, [URL]);
+
+  function executeSearch(e) {
+    if (e.charCode === 13) {
+      e.preventDefault();
+      navigate('/search/' + search);
+    } }
 
   return (
     <div id="etusivu">
@@ -133,7 +145,17 @@ export default function NavigationBar() {
                   <Link className='nav-link' to="/ostoskori" >Ostoskori</Link>
                 </li>
 
-            </ul>
+                </ul>
+          <form className="form-inline my-2 my-lg-0">
+            <input 
+              value={search} 
+              onChange={(e) => setSearch(e.target.value)} 
+              onKeyPress={(e) => executeSearch(e)} 
+              className="form-control mr-sm-2" 
+              type="search" 
+              placeholder="Search" 
+              aria-label="Search" />
+          </form>
           </div>
         </div>
       </nav>
