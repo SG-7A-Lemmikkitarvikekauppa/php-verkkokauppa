@@ -22,7 +22,7 @@ export default function Tuotteet() {
   }, [tuoteId]);
   
   return (  
-    <div className='product-grid'>
+    <div className='product'>
       <h3>Products </h3>
       {tuotteet.map(tuote => (
         <Link key={tuote.tuoteid} to={'/tuote/' + tuote.tuoteid}>
