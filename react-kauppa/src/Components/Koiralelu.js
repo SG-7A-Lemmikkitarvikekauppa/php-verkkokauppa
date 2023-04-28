@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from '../images/pallokoira.jpg';
 
  function Koiralelu({tuotelista}) {
 

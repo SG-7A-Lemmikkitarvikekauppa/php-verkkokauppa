@@ -1,10 +1,10 @@
 import React from 'react'
 import './Kampanjat.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import shampoo from './shampoo.png';
-import kissaruoka from './kissaruoka.jpg';
-import kissapuu from './kissapuu.jpg';
-import laser from '../images/kissalaser.jpg';
+// import shampoo from './shampoo.png';
+// import kissaruoka from './kissaruoka.jpg';
+// import kissapuu from './kissapuu.jpg';
+// import laser from '../images/kissalaser.jpg';
 
 
  function Tarjouksetkissat() {

@@ -1,10 +1,10 @@
 import './Kampanjat.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './korianruoka.png';
-import pallo from '../images/pallokoira.jpg';
-import valjaat from './koiravaljaat.jpg';
-import luu from '../images/koiraluu.jpg';
+// import logo from './korianruoka.png';
+// import pallo from '../images/pallokoira.jpg';
+// import valjaat from './koiravaljaat.jpg';
+// import luu from '../images/koiraluu.jpg';
 
  function Tarjouksetkoirat() {
   return (

@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from '../images/kissalaser.jpg';
 
  function Kissalelu({tuotelista}) {
 
@@ -7,7 +6,7 @@ import logo from '../images/kissalaser.jpg';
 
   return (
     <div className="product-item">
-      <img src= {logo} alt="tuotteen kuva" />
+      <img src= {tuotelista.tuotekuva} alt="tuotteen kuva" />
       <h3> {tuotelista.nimi}  </h3>
       <p> {tuotelista.kuvaus} </p>
       <p> {tuotelista.hinta} juuu00 €</p>
