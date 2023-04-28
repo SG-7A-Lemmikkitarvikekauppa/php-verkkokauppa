@@ -7,7 +7,7 @@ import logo from '../images/koiraluu.jpg';
 
   return (
     <div className="product-item">
-      <img src= {logo} alt="tuotteen kuva" />
+      <img src= {tuotelista.tuotekuva} alt="tuotteen kuva" />
       <h3> {tuotelista.nimi}  </h3>
       <p> {tuotelista.kuvaus} </p>
       <p> {tuotelista.hinta},00 €</p>
