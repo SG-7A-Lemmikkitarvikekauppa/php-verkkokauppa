@@ -88,26 +88,25 @@ export default function NavigationBar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Koirat
+                 Koirat
                 </a>
                 <ul
                   className="dropdown-menu"
                   aria-labelledby="dropdown01"
                 >
-                  {tuoteryhmat.map((tuoteryhma) => (
-                    <li key={tuoteryhma.id} kategoria={tuoteryhma}>
+                  {tuoteryhmat.map((tuote) => (
+                    <li key={tuote.tuoteid} kategoria={tuote}>
                       <Link
                         className="dropdown-item"
-                        to='./Koiratlelut/'
+                        to={'/tuotteetkoirat/' + tuote.tuoteid}
                       >
-                       <p> {tuoteryhma.nimi} </p>
+                       <p> {tuote.nimi} </p>
 
                       </Link>
                     </li>
                   ))}
                 </ul>
               </li>
-
 
               <li className="nav-item">
               <Dropdown>

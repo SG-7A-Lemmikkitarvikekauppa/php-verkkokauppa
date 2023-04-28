@@ -3,31 +3,31 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-export default function Tuotteet() {
-  const [tuotteet, setTuotteet] = useState([]);
+export default function Tuotteetkoirat() {
+  const [tuotteetkoirat, setTuotteetkoirat] = useState([]);
   const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/';
   
   let { tuoteId } = useParams();
 
   useEffect(() => {
-    setTuotteet([]);
+    setTuotteetkoirat([]);
 
-    axios.get(URL + "products/gettuotteet.php/" + tuoteId)
+    axios.get(URL + "products/gettuotteetkoirat.php/" + tuoteId)
       .then((response) => {
         const json = response.data;
-        setTuotteet(json);
+        setTuotteetkoirat(json);
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
   }, [tuoteId]);
   
   return (  
-    
+   
     <div className='product'>
       
-      {tuotteet.map(tuote => (
+      {tuotteetkoirat.map(tuote => (
         <Link key={tuote.tuoteid} to={'/tuote/' + tuote.tuoteid}>
-          <div >
+          <div>
             <img />
              <h3> {tuote.nimi} </h3>
             <p>{tuote.kuvaus}</p>
@@ -37,6 +37,7 @@ export default function Tuotteet() {
         </Link>
       ))}
     </div>
+   
 
     
   )
