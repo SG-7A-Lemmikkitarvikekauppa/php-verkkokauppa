@@ -26,7 +26,8 @@ import Tuotekortti from './Components/Tuotekortti';
 import Tuotteet from './Pages/tuotteet';
 import Tuotelista from './Components/Tuotelista';
 import Tuotteetkoirat from './Pages/tuotteetkoirat';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
 
 const URL = 'http://localhost:3000/';
 
