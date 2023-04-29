@@ -1,8 +1,15 @@
+
+
 .product {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
   }
   
   .product a {
@@ -13,19 +20,19 @@
   .product img {
     width: 100%;
     height: auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
   }
   
   .product h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   .product p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .product button {
@@ -33,12 +40,11 @@
     color: #fff;
     border: none;
     border-radius: 0.25rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    margin-top: 0.5rem;
   }
   
   .product button:hover {
