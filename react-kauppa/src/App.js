@@ -25,15 +25,57 @@ import Koiratmuut from './Pages/Koiratmuut';
 import Tuotekortti from './Components/Tuotekortti';
 import Tuotteet from './Pages/tuotteet';
 import Tuotelista from './Components/Tuotelista';
+import { useState,useEffect } from 'react';
 
 const URL = 'http://localhost:3000/';
 
 
+
 function App() {
+
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+   if ('cart' in localStorage) {
+     setCart(JSON.parse(localStorage.getItem('cart')));
+   }
+  }, [])
+
+  function addToCart(product) {
+    if (cart.some(item => item.id === product.id)) {
+      const existingProduct = cart.filter(item => item.id ===product.id);
+      updateAmount(parseInt(existingProduct[0].amount) + 1,product);
+    } else {
+      product['amount'] = 1;
+      const newCart = [...cart,product];
+      setCart(newCart);
+      localStorage.setItem('cart',JSON.stringify(newCart));
+    }
+  }
+
+  function removeFromCart(product) {
+    const itemsWithoutRemoved = cart.filter(item => item.id !== product.id);
+    setCart(itemsWithoutRemoved);
+    localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
+  }
+
+  function updateAmount(amount,product) {
+    product.amount = amount;
+    const index = cart.findIndex((item => item.id === product.id));
+    const modifiedCart = Object.assign([...cart],{[index]: product});
+    setCart(modifiedCart);
+    localStorage.setItem('cart',JSON.stringify(modifiedCart));
+  }
+
+  function emptyCart() {
+    setCart([]);
+    localStorage.removeItem('cart');
+  }
+
   return (
     <Router>
       <Header />
-      <NavigationBar url={URL} />
+      <NavigationBar url={URL}/>
       
       <div className='container'>
         <Routes>
@@ -58,6 +100,11 @@ function App() {
           <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} />} />
           <Route path='tuotelista' element={<Tuotelista/>} />
           
+
+          <Route path="search/:searchPhrase" element={<Tuotteet url={URL} />} />
+          <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} addToCart={addToCart}/>} />
+
+      
         </Routes>
       </div>
 

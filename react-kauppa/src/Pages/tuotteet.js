@@ -8,8 +8,20 @@ export default function Tuotteet() {
   const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/';
   
   let { tuoteId } = useParams();
+  
 
   useEffect(() => {
+
+    let address = '';
+    
+    if (tuoteId.searchPhrase === undefined) {
+      address = URL + 'products/getproducts.php/' + tuoteId.categoryId;
+    } else {
+      address = URL + 'products/searchproducts.php/' + tuoteId.searchPhrase;
+    }
+
+    
+
     setTuotteet([]);
 
     axios.get(URL + "products/gettuotteet.php/" + tuoteId)
