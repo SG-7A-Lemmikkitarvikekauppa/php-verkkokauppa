@@ -94,7 +94,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 3rem;
+    background-image: url(logotassu.png);
+    background-repeat: no-repeat;
+    background-size: 110px;
+    background-position: 30px;
   }
   
   section {

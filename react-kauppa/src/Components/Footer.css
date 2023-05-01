@@ -1,0 +1,8 @@
+div.footercss{
+    border: 1px solid #ced4da;
+    margin: 2rem;
+    padding: 2rem;
+
+    background-color: peru;
+    font-size: 5rem;
+}

@@ -43,11 +43,12 @@ export default function Tuotteet() {
             <img />
              <h3> {tuote.nimi} </h3>
             <p>{tuote.kuvaus}</p>
-            <p>{tuote.hinta},00 €</p>
+            <p className='hinta'>{tuote.hinta},00 €</p>
             <button>Lisää ostoskoriin</button>
           </div>
         </Link>
       ))}
+      
     </div>
 
     
