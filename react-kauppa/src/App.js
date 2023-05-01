@@ -103,7 +103,7 @@ function App() {
           <Route path='tuotelista' element={<Tuotelista/>} />
           <Route path="search/:searchPhrase" element={<Tuotteet url={URL} />} />
           <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} addToCart={addToCart}/>} />
-
+          <Route path="tuotteetkoirat/:tuoteId" element={<Tuotteetkoirat url={URL} />} />
       
         </Routes>
       </div>
