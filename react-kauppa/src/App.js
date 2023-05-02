@@ -25,6 +25,7 @@ import Tuotekortti from './Components/Tuotekortti';
 import Tuotteet from './Pages/tuotteet';
 import Tuotelista from './Components/Tuotelista';
 import Tuotteetkoirat from './Pages/tuotteetkoirat';
+import Tuote from './Pages/tuote';
 import { useState, useEffect } from 'react';
 
 
@@ -102,7 +103,8 @@ function App() {
           <Route path="tuotteetkoirat/:tuoteId" element={<Tuotteetkoirat url={URL} />} />
           <Route path="search/:searchPhrase" element={<Tuotteet url={URL} />} />
           <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} addToCart={addToCart}/>} />
-
+          <Route path="tuotteetkoirat/:tuoteId" element={<Tuotteetkoirat url={URL} />} />
+          <Route path="tuote/:tuoteNro" element={<Tuote url={URL}/>} />
       
         </Routes>
       </div>
