@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
 import Etusivu from './Pages/Etusivu';
+
 import NavigationBar from './Components/Navigationbar';
 import Kissanlelut from './Pages/KissatLelut';
 import KissatHoito from './Pages/kissatHoito';
@@ -26,7 +27,6 @@ import Tuotteet from './Pages/tuotteet';
 import Tuote from './Pages/tuote';
 import Tuotelista from './Components/Tuotelista';
 import Tuotteetkoirat from './Pages/tuotteetkoirat';
-import Tuote from './Pages/tuote';
 import { useState, useEffect } from 'react';
 import searchPhrase from './Pages/tuotteet';
 
@@ -100,14 +100,13 @@ function App() {
           <Route path="Tarjouksetkoirat" element={<Tarjouksetkoirat />} />
           <Route path="Tarjouksetjasen" element={<Tarjouksetjasen />} />
           <Route path="Poistonurkka" element={<Poistonurkka />} />
+          
           <Route path="Tuotekortti" element={<Tuotekortti />} />
           <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} />} />
           <Route path='tuotelista' element={<Tuotelista/>} />
-          <Route path="tuotteetkoirat/:tuoteId" element={<Tuotteetkoirat url={URL} />} />
-          <Route path="search/:searchPhrase" element={<Tuotteet url={URL} />} />
-          <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} addToCart={addToCart}/>} />
-          <Route path="tuotteetkoirat/:tuoteId" element={<Tuotteetkoirat url={URL} />} />
-          <Route path="tuote/:tuoteNro" element={<Tuote url={URL}/>} />
+          <Route path="/search/:searchPhrase" element={<Tuotteet url={URL} />} />
+          <Route path="/tuotteet/:tuoteId" element={<Tuote url={URL} addToCart={addToCart}/>} />
+
       
         </Routes>
       </div>

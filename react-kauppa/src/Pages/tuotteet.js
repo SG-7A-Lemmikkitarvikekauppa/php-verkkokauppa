@@ -44,7 +44,7 @@ export default function Tuotteet() {
       } else {
         setNimi(tuoteId.searchPhrase);
         setTuotteet(json);
-        console.log(json);
+        console.log(json);}
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
