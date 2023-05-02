@@ -58,12 +58,12 @@ export default function Tuotteet() {
   
   return (  
     
-    <div>
+    <div className='product'>
       
-      <h3>Products for {nimi}</h3>
+      
       {tuotteet.map(tuote => (
         <Link key={tuote.tuotenro} to={'/tuote/' + tuote.tuotenro}>
-          <div >
+          <div className='yksit'>
             <img src={"http://localhost:3000/"+tuote.kuva}/>
              <h3> {tuote.nimi} </h3>
             <p>{tuote.kuvaus}</p>
