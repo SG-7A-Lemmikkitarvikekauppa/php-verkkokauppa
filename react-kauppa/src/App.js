@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
 import Etusivu from './Pages/Etusivu';
-import Yhteystiedot from './Pages/Yhteystiedot';
 import NavigationBar from './Components/Navigationbar';
 import Kissanlelut from './Pages/KissatLelut';
 import KissatHoito from './Pages/kissatHoito';
@@ -97,7 +96,6 @@ function App() {
           <Route path="Tarjouksetkoirat" element={<Tarjouksetkoirat />} />
           <Route path="Tarjouksetjasen" element={<Tarjouksetjasen />} />
           <Route path="Poistonurkka" element={<Poistonurkka />} />
-          <Route path="Yhteystiedot" element={<Yhteystiedot />} />
           <Route path="Tuotekortti" element={<Tuotekortti />} />
           <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} />} />
           <Route path='tuotelista' element={<Tuotelista/>} />
