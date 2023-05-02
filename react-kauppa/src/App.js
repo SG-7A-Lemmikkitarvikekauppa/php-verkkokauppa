@@ -99,6 +99,7 @@ function App() {
           <Route path="Tuotekortti" element={<Tuotekortti />} />
           <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} />} />
           <Route path='tuotelista' element={<Tuotelista/>} />
+          <Route path="tuotteetkoirat/:tuoteId" element={<Tuotteetkoirat url={URL} />} />
           <Route path="search/:searchPhrase" element={<Tuotteet url={URL} />} />
           <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} addToCart={addToCart}/>} />
 
