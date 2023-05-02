@@ -117,7 +117,6 @@ export default function NavigationBar(){
                         to={'/tuotteetkoirat/' + tuote.tuoteid}
                       >
                        <p> {tuote.nimi} </p>
-
                       </Link>
                     </li>
                   ))}
@@ -142,9 +141,7 @@ export default function NavigationBar(){
 
 
 
-              <li className="nav-item">
-                  <Link className='nav-link' to="/yhteystiedot" >Yhteystiedot</Link>
-                </li>
+
                 <li className="nav-item">
                   <Link className='nav-link' to="/ostoskori" >Ostoskori</Link>
                 </li>

@@ -44,13 +44,11 @@ export default function Tuotteet() {
       } else {
         setNimi(tuoteId.searchPhrase);
         setTuotteet(json);
-      }
-
-    }) .catch(error => {
-      alert(error.response === undefined ? error : error.response.data.error);
-    })
-}, [tuoteId]);
-
+        console.log(json);
+      }).catch(error => {
+        alert(error.response === undefined ? error : error.response.data.error);
+      })
+  }, [tuoteId]);
   
   return (  
     
@@ -58,10 +56,10 @@ export default function Tuotteet() {
       
       <h3>Products for {nimi}</h3>
       {tuotteet.map(tuote => (
-        <Link key={tuote.id} to={'/tuote/' + tuote.tuoteid}>
-          <div>
-            {tuote.nimi}
-
+        <Link key={tuote.tuoteid} to={'/tuote/' + tuote.tuoteid}>
+          <div >
+            <img src={"http://localhost:3000/"+tuote.kuva}/>
+             <h3> {tuote.nimi} </h3>
             <p>{tuote.kuvaus}</p>
             <p className='hinta'>{tuote.hinta},00 €</p>
             <button>Lisää ostoskoriin</button>
