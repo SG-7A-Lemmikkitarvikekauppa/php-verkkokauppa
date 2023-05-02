@@ -28,6 +28,7 @@ export default function Tuotteet() {
       .then((response) => {
         const json = response.data;
         setTuotteet(json);
+        console.log(json);
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
@@ -39,8 +40,8 @@ export default function Tuotteet() {
       
       {tuotteet.map(tuote => (
         <Link key={tuote.tuoteid} to={'/tuote/' + tuote.tuoteid}>
-          <div className='yksit'>
-            <img src={tuote.kuva}/>
+          <div >
+            <img src={"http://localhost:3000/"+tuote.kuva}/>
              <h3> {tuote.nimi} </h3>
             <p>{tuote.kuvaus}</p>
             <p className='hinta'>{tuote.hinta},00 €</p>
