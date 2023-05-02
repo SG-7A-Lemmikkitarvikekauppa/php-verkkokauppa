@@ -113,7 +113,6 @@ export default function NavigationBar(){
                         to={'/tuotteetkoirat/' + tuote.tuoteid}
                       >
                        <p> {tuote.nimi} </p>
-
                       </Link>
                     </li>
                   ))}
