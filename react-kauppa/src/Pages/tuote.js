@@ -9,9 +9,10 @@ export default function Tuote() {
   let { tuoteNro } = useParams();
 
   useEffect(() => {
-    axios.get(`${URL}products/gettuote.php/${tuoteNro}`)
+    axios.get(URL + "products/gettuote.php/" + tuoteNro)
       .then((response) => {
         const json = response.data;
+        console.log(json);
         setTuote(response.data);
       })
       .catch((error) => {
