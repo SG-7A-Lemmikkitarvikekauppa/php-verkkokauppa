@@ -19,28 +19,34 @@ export default function Tuotteet() {
 
     let address = '';
     
-    if (tuoteId.searchPhrase === undefined) {
-      address = URL + 'products/getproducts.php/' + tuoteId.categoryId;
-    } else {
-      address = URL + 'products/searchproducts.php/' + tuoteId.searchPhrase;
-    }
+    // if (tuoteId.searchPhrase === undefined) {
+    //   address = URL + 'products/gettuotteet.php/' + tuoteId;
+    //   console.log(address)
+    //   console.log(tuoteId)
+    // } else {
+    //   address = URL + 'products/searchproducts.php/' + tuoteId.searchPhrase;
+    // }
 
     
 
-    setTuotteet([]);
+    // setTuotteet([]);
 
     if (tuoteId.searchPhrase === undefined) {
-      address = URL + 'products/gettuotteet.php/' + tuoteId.tuoteid;
+      address = URL + 'products/gettuotteet.php/' + tuoteId;
     } else {
       address = URL + 'products/searchproduct.php/' + tuoteId.searchPhrase;
     }
+    console.log(address)
 
     axios.get(address)
     .then((response) => {
       const json = response.data;
       if (tuoteId.searchPhrase === undefined) {
-        setNimi(json.category);
-        setTuotteet(json.products);
+        // setNimi(json.category);
+        console.log(json.category)
+        setTuotteet(json);
+        console.log(json.products)
+        console.log(json)
       } else {
         setNimi(tuoteId.searchPhrase);
         setTuotteet(json);
