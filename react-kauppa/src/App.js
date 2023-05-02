@@ -24,9 +24,12 @@ import Kissatmuut from './Pages/Kissatmuut';
 import Koiratmuut from './Pages/Koiratmuut';
 import Tuotekortti from './Components/Tuotekortti';
 import Tuotteet from './Pages/tuotteet';
+import Tuote from './Pages/tuote';
 import Tuotelista from './Components/Tuotelista';
 import Tuotteetkoirat from './Pages/tuotteetkoirat';
 import { useState, useEffect } from 'react';
+import searchPhrase from './Pages/tuotteet';
+
 
 
 const URL = 'http://localhost:3000/';
@@ -101,8 +104,8 @@ function App() {
           <Route path="Tuotekortti" element={<Tuotekortti />} />
           <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} />} />
           <Route path='tuotelista' element={<Tuotelista/>} />
-          <Route path="search/:searchPhrase" element={<Tuotteet url={URL} />} />
-          <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} addToCart={addToCart}/>} />
+          <Route path="/search/:searchPhrase" element={<Tuotteet url={URL} />} />
+          <Route path="/tuotteet/:tuoteId" element={<Tuote url={URL} addToCart={addToCart}/>} />
 
       
         </Routes>

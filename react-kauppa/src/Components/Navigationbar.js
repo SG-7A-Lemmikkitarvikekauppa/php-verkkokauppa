@@ -1,8 +1,9 @@
-import React, { useEffect, useState, executeSearch } from 'react';
-import { Link, useNavigate,} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams,} from 'react-router-dom';
 import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
 import KissatHoito from '../Pages/kissatHoito';
+import searchPhrase from '../Pages/tuotteet';
 
 
 
@@ -15,8 +16,11 @@ export default function NavigationBar(){
 
   const navigate = useNavigate();
 
+  
+
   useEffect(() => {
     console.log(URL);
+
 
     axios
       .get(URL + 'products/gettuoteryhmat.php')
