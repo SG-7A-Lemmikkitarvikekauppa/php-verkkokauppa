@@ -40,7 +40,7 @@ export default function Tuotteet() {
       {tuotteet.map(tuote => (
         <Link key={tuote.tuoteid} to={'/tuote/' + tuote.tuoteid}>
           <div >
-            <img />
+            <img src={tuote.kuva}/>
              <h3> {tuote.nimi} </h3>
             <p>{tuote.kuvaus}</p>
             <p className='hinta'>{tuote.hinta},00 €</p>
