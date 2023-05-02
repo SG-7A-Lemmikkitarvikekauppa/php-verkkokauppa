@@ -30,8 +30,8 @@ export default function Tuotteetkoirat() {
           <div className='yksit'>
             <img />
              <h3> {tuote.nimi} </h3>
-            <p>{tuote.kuvaus}</p>
-            <p>{tuote.hinta},00 €</p>
+            <p className='kuvaus'>{tuote.kuvaus}</p>
+            <p className='hinta'>{tuote.hinta},00 €</p>
             <button>Lisää ostoskoriin</button>
           </div>
         </Link>
