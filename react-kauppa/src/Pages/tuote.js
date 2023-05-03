@@ -25,10 +25,7 @@ export default function Tuote() {
       {tuote ? (
         <>
           <h3>{tuote.nimi}</h3>
-          <p>{tuote.hinta}</p>
-          <p>{tuote.tuotenro}</p>
-          <button>Lisää ostoskoriin</button>
-          <div key={tuote.tuotenro}></div>
+          <p>{tuote.hinta} €</p>
         </>
       ) : (
         <p>Loading...</p>
