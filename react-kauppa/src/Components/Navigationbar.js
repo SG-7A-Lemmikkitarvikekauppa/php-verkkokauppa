@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
 import KissatHoito from '../Pages/kissatHoito';
 import searchPhrase from '../Pages/tuotteet';
+import Kaikkituotteet from '../Pages/kaikkituotteet'
 
 
 
