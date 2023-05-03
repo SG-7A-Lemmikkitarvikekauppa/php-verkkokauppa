@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './tuote.css';
 
 export default function Tuote() {
   const [tuote, setTuote] = useState(null);
@@ -21,7 +22,7 @@ export default function Tuote() {
   }, [tuoteNro]);
 
   return (
-    <div>
+    <div className='tuotteet'>
       {tuote ? (
         <>
           <h3>{tuote.nimi}</h3>
