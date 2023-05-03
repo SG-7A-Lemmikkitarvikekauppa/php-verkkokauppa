@@ -2,7 +2,10 @@ import axios from 'axios';
 import React,{useState,useEffect} from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-export default function Products({url}) {
+
+const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/'
+
+export default function Products({URL}) {
   const [nimi,setNimi] = useState('');
   const [tuoteryhmat, setTuoteryhmat] = useState([]);
 
@@ -14,9 +17,9 @@ export default function Products({url}) {
     let address = '';
     
     if (params.searchPhrase === undefined) {
-      address = url + 'products/gettuotteet.php/' + params.categoryId;
+      address = URL + 'products/gettuotteet.php/' + params.categoryId;
     } else {
-      address = url + 'products/searchproduct.php/' + params.searchPhrase;
+      address = URL + 'products/searchproduct.php/' + params.searchPhrase;
     }
 
     axios.get(address)
