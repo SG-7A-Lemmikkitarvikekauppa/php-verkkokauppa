@@ -26,7 +26,7 @@ export default function Tuotteetkoirat() {
     <div className='product'>
       
       {tuotteetkoirat.map(tuote => (
-        <Link key={tuote.tuotenro} to={'/tuote/' + tuote.tuotenro}>
+        <Link key={tuote.tuoteid} to={'/tuote/' + tuote.tuoteid}>
           <div className='yksit'>
             <img src={"http://localhost:3000/"+tuote.kuva}/>
              <h3> {tuote.nimi} </h3>

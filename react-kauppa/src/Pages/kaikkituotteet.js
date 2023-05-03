@@ -40,7 +40,7 @@ export default function Products({URL}) {
   
   return (  
     <div>
-      <h3>Tuotteet: {nimi}</h3>
+      <h3>Products for {nimi}</h3>
       {tuoteryhmat.map(tuote => (
         <Link key={tuote.tuoteid} to={'/tuotteet/' + tuote.tuoteid}>
           <div>

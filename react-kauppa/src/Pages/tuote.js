@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './tuote.css';
 
 export default function Tuote() {
-  const [tuote, setTuote] = useState({});
+  const [tuote, setTuote] = useState(null);
   const URL = 'http://localhost/Verkko-kauppaphp/php-kauppa/';
 
   let { tuoteNro } = useParams();
@@ -21,19 +22,18 @@ export default function Tuote() {
   }, [tuoteNro]);
 
   return (
-    <div>
-
-    {tuote ? (
-      <>
-        <h3>{tuote.nimi}</h3>
-        <p>{tuote.hinta}</p>
-        <p>{tuote.tuotenro}</p>
-        <button>Lisää ostoskoriin</button>
-        <div key={tuote.tuotenro}></div>
-      </>
-    ) : (
-      <p>Loading...</p>
-    )}
-  </div>
+    <div className='tuotteet'>
+      {tuote ? (
+        <>
+          <h3>{tuote.nimi}</h3>
+          <p>{tuote.hinta}</p>
+          <p>{tuote.tuotenro}</p>
+          <button>Lisää ostoskoriin</button>
+          <div key={tuote.tuotenro}></div>
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
   );
 }
