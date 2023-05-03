@@ -15,15 +15,17 @@ export default function Tuotteet() {
 
     let address = '';
     
-    if (tuoteId.searchPhrase === undefined) {
-      address = URL + 'products/getproducts.php/' + tuoteId.categoryId;
-    } else {
-      address = URL + 'products/searchproducts.php/' + tuoteId.searchPhrase;
-    }
+    // if (tuoteId.searchPhrase === undefined) {
+    //   address = URL + 'products/gettuotteet.php/' + tuoteId;
+    //   console.log(address)
+    //   console.log(tuoteId)
+    // } else {
+    //   address = URL + 'products/searchproducts.php/' + tuoteId.searchPhrase;
+    // }
 
     
 
-    setTuotteet([]);
+    // setTuotteet([]);
 
     axios.get(URL + "products/gettuotteet.php/" + tuoteId)
       .then((response) => {
@@ -37,11 +39,11 @@ export default function Tuotteet() {
   
   return (  
     
-    <div className='product'>
+    <div>
       
       {tuotteet.map(tuote => (
-        <Link key={tuote.tuoteid} to={'/tuote/' + tuote.tuoteid}>
-          <div >
+        <Link key={tuote.tuotenro} to={'/tuote/' + tuote.tuotenro}>
+          <div className='yksit'>
             <img src={"http://localhost:3000/"+tuote.kuva}/>
              <h3> {tuote.nimi} </h3>
             <p>{tuote.kuvaus}</p>
