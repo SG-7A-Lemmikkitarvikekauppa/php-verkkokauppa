@@ -28,7 +28,7 @@ import Tuote from './Pages/tuote';
 import Tuotelista from './Components/Tuotelista';
 import Tuotteetkoirat from './Pages/tuotteetkoirat';
 import { useState, useEffect } from 'react';
-import searchPhrase from './Pages/tuotteet';
+import Kaikkituotteet from './Pages/kaikkituotteet'
 
 
 
@@ -104,11 +104,13 @@ function App() {
           <Route path="Tuotekortti" element={<Tuotekortti />} />
           <Route path="tuotteet/:tuoteId" element={<Tuotteet url={URL} />} />
           <Route path='tuotelista' element={<Tuotelista/>} />
-          <Route path="/search/:searchPhrase" element={<Tuotteet url={URL} />} />
+          <Route path="/search/:searchPhrase" element={<Kaikkituotteet url={URL} />} />
           <Route path="/tuotteet/:tuoteId" element={<Tuote url={URL} addToCart={addToCart}/>} />
           <Route path="tuotteetkoirat/:tuoteId" element={<Tuotteetkoirat url={URL} />} />
           <Route path="tuote/:tuoteNro" element={<Tuote url={URL}/>} />
-
+          <Route path="/search/:searchPhrase" element={<Tuotteet url={URL} />} />
+          <Route path="/search/:searchPhrase" element={<Tuotteet url={URL} />} />
+          
       
         </Routes>
       </div>
