@@ -65,6 +65,7 @@
     border-radius: 0.25rem;
     display: grid;
     grid-template-columns: 1fr;
-    height: fit-content;
+    width: fit-content;
+    height: 100%;
   }
 
