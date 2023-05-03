@@ -126,12 +126,13 @@
 
   
   .product-item {
-    background-color: #fff;
+    display: grid;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
     display: grid;
     grid-template-columns: 1fr;
-    height: 580px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    height: fit-content;
   }
   
   .product-item img {
