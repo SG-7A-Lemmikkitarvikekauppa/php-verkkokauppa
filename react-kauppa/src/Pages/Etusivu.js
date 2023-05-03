@@ -54,9 +54,9 @@ return (
 
           <div className="product-grid">
 
-     {ruoka.map((tuote) => (
-        <Tuotelista key={tuote.id} tuotelista={tuote} />
-      ))}
+            {ruoka.map((tuote) => (
+                <Tuotelista key={tuote.id} tuotelista={tuote} />
+              ))}
           </div>
       <div>
         <h2 className="hoo2">
