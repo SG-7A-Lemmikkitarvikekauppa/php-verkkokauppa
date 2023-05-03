@@ -10,7 +10,7 @@ import React from 'react'
       <img  />
       <h3> {tuotelista.nimi}  </h3>
       <p> {tuotelista.kuvaus} </p>
-      <p> {tuotelista.hinta},00 €</p>
+      <p className='hintap'> {tuotelista.hinta},00 €</p>
       <button>Lisää ostoskoriin</button>
     </div>
   )
